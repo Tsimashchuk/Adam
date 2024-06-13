@@ -1,20 +1,22 @@
-def get_mask_card_number(card: str) -> str:
+from typing import Any
+
+
+def get_mask_card_number(card: Any) -> Any:
     """Функция, маскирнющая карты"""
-    card = str(card)
-    new_card = card[:4] + " " + card[4:6] +  "**" + " " + "****" + " " + card[:4]
+    private_card = card[-16:-12] + " " + card[-12:-10] + "**" + " " + "****" + " " + card[-4:]
 
-    return new_card
-
-
-print(get_mask_card_number("7000792289606361"))
+    return private_card
 
 
-def get_mask_account(account: str) -> str:
+print(get_mask_card_number("Maestro 1596837868705199"))
+
+
+def get_mask_account(account: Any) -> Any:
     """Функция, маскирнющая счет """
 
-    account_user = str(account)
-    account = "**" + account_user[:4]
+    account = "**" + account[-4:]
 
     return account
 
-print(get_mask_account("73654108430135874305"))
+
+print(get_mask_account("Счет 73654108430135874305"))
