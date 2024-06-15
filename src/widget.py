@@ -1,7 +1,5 @@
-import os
 from typing import Any
-
-import masks
+from src import masks
 
 
 def mask_account_card(nums: Any) -> Any:
