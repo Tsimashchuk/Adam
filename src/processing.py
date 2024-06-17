@@ -20,7 +20,7 @@ print(filter_by_state([
     {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}]))
 
 
-def sort_by_date(sorted_list: Any, date=True) -> Any:
+def sort_by_date(sorted_list: Any, date: bool=True) -> Any:
 
     """ Функция в которой, исходные словари отсортированы по убыванию даты"""
 
