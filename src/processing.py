@@ -1,4 +1,7 @@
-def filter_by_state(distionary_list: list[dict[str, int]], state: str = "EXECUTED") -> list[dict[str, int]]:
+from typing import Any
+
+
+def filter_by_state(distionary_list: list[dict[str, Any]], state: str = "EXECUTED") -> list[dict[str, Any]]:
 
     """ Функция, возвращает новый список, содержащий только те словари,
     у которых по ключу содержит переданное в функцию значение """
@@ -18,7 +21,7 @@ print(filter_by_state([
     {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}]))
 
 
-def sort_by_date(sorted_list: list[dict[str, int]], date: bool = True) -> list[dict[str, int]]:
+def sort_by_date(sorted_list: list[dict[str, Any]], date: bool = True) -> list[dict[str, Any]]:
 
     """ Функция в которой, исходные словари отсортированы по убыванию даты"""
 
