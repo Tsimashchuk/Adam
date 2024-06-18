@@ -1,7 +1,4 @@
-from typing import Any
-
-
-def filter_by_state(distionary_list: Any, state: str = "EXECUTED") -> Any:
+def filter_by_state(distionary_list: list[dict[str, int]], state: str = "EXECUTED") -> list[dict[str, int]]:
 
     """ Функция, принимает на вход список словарей и значение для ключа state """
 
@@ -20,7 +17,7 @@ print(filter_by_state([
     {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}]))
 
 
-def sort_by_date(sorted_list: Any, date: bool=True) -> Any:
+def sort_by_date(sorted_list: list[dict[str, int]], date: bool = True) -> list[dict[str, int]]:
 
     """ Функция в которой, исходные словари отсортированы по убыванию даты"""
 
