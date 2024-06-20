@@ -1,8 +1,7 @@
-from typing import Any
 from src import masks
 
 
-def mask_account_card(nums: Any) -> Any:
+def mask_account_card(nums: str) -> str:
     """ Функция, маскирует маскирует карты и счета """
 
     if "Счет" in nums:
@@ -13,13 +12,7 @@ def mask_account_card(nums: Any) -> Any:
         return new_card
 
 
-print(mask_account_card("Maestro 1596837868705199"))
-
-
-def get_data(date: Any) -> Any:
+def get_data(date: str) -> str:
     """ Функция, выводящая дату """
 
     return f"{date[9:11]}.{date[6:8]}.{date[1:5]}"
-
-
-print(get_data("v2018-07-11T02:26:18.671407"))
