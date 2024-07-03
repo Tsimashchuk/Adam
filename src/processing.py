@@ -18,5 +18,5 @@ def sort_by_date(sorted_list: list[dict[str, Any]], descendig: bool = True) -> l
 
     """ Функция в которой, исходные словари отсортированы по убыванию даты"""
 
-    decreasing_date = sorted(sorted_list, key=lambda t: t.get("date"), reverse=descendig)
+    decreasing_date = sorted(sorted_list, key=lambda t: t["date"], reverse=descendig)
     return decreasing_date
