@@ -7,12 +7,11 @@ def mask_account_card(nums: str) -> str:
     if "Счет" in nums:
         return nums[:-20] + masks.get_mask_account(nums)
     else:
-        cards = masks.get_mask_card_number(nums)
-        new_card = nums[:-16] + cards
+        new_card = nums[:-20] + " " + nums[-19:-12] + "** **** " + nums[-4:]
         return new_card
 
 
 def get_data(date: str) -> str:
     """ Функция, выводящая дату """
 
-    return f"{date[9:11]}.{date[6:8]}.{date[1:5]}"
+    return f"{date[8:10]}.{date[5:7]}.{date[0:4]}"
