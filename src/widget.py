@@ -7,7 +7,8 @@ def mask_account_card(nums: str) -> str:
     if "Счет" in nums:
         return nums[:-20] + masks.get_mask_account(nums)
     else:
-        new_card = nums[:-20] + " " + nums[-19:-12] + "** **** " + nums[-4:]
+        card = masks.get_mask_card_number(nums)
+        new_card = nums[:-16] + card
         return new_card
 
 
