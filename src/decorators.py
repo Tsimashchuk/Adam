@@ -23,7 +23,7 @@ def log(filename: Any) -> Callable:
     return decorator
 
 
-@log(filename='src/log_file.txt')
+@log(filename='log_file.txt')
 # log(filename=None)
 def my_function(x: int, y: int) -> int:
     """ Функция складывающая два числа """
