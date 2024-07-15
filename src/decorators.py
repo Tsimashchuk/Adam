@@ -3,6 +3,13 @@ from typing import Any, Callable
 
 
 def log(filename: Any) -> Callable:
+    """
+    Декоратор автоматически логирующий начало и конец выполнения функции,
+    а также ее результаты или возникшие ошибки.
+    Логи могут записываться в файл или выводиться в консоль, в зависимости от значения аргумента filename.
+    :param filename: Имя файла для записи логов. Если None, логи выводятся в консоль.
+    :return: Обёртка для декорируемой функции.
+    """
     def decorator(func: Callable) -> Callable:
         @wraps(func)
         def wrapper(*args: Any, **kwargs: Any) -> Any:
