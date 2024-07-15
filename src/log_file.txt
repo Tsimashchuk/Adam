@@ -1,0 +1,2 @@
+log_contentsfunc) ok
+my_function error:my_function() missing 2 required positional arguments: 'x' and 'y', Inputs: (), {}

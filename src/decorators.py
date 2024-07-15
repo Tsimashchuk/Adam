@@ -1,10 +1,11 @@
 from functools import wraps
+from typing import Any, Callable
 
 
-def log(filename=None):
-    def decorator(func):
+def log(filename: Any) -> Callable:
+    def decorator(func: Callable) -> Callable:
         @wraps(func)
-        def wrapper(*args, **kwargs):
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
             try:
                 result = func(*args, **kwargs)
                 if filename is not None:
@@ -20,3 +21,14 @@ def log(filename=None):
         return wrapper
 
     return decorator
+
+
+@log(filename='src/log_file.txt')
+# log(filename=None)
+def my_function(x: int, y: int) -> int:
+    """ Функция складывающая два числа """
+    return x + y
+
+
+if __name__ == "__main__":
+    print(my_function(1, 2))
