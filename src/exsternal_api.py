@@ -14,7 +14,7 @@ load_dotenv(env_path)
 apikey = os.getenv("API_KEY")
 
 
-def convert_transaction_to_rubles(transaction: Any) -> float:
+def convert_transaction_to_rubles(transaction: Any) -> Any:
     """
     Функция которая принимает на вход транзакции и возвращает ее сумму в рублях
     """

@@ -1,7 +1,6 @@
 import json
 from unittest.mock import patch
 
-
 from src.utils import read_json_file
 
 
@@ -27,4 +26,4 @@ def test_read_json_file():
             "description": "Перевод организации",
             "from": "Maestro 1596837868705199",
             "to": "Счет 64686473678894779589"
-    }
+        }
