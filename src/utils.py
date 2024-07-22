@@ -22,4 +22,4 @@ def read_json_file(file_path: Any) -> list[dict]:
 
 file_path = Path(ROOT_PATH, "../data/operations.json")
 transactions = read_json_file(file_path)
-# print(transactions)
+print(transactions)
